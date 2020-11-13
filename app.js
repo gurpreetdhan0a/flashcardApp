@@ -78,7 +78,9 @@ app.use((req, res, next) => {
     res.render('error');
   });
   
-app.listen(3000, ()=>
+const PORT = process.env.PORT || 80;
+
+app.listen(PORT, ()=>
 {
-    console.log("The server is running at 3000");
+    console.log(`The server is running at ${PORT}`);
 })
